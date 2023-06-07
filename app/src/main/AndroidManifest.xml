@@ -13,13 +13,13 @@
         android:theme="@style/Theme.Entomology"
         tools:targetApi="31">
         <activity
-            android:name=".views.RegistrosActivity"
+            android:name=".presentation.views.RegistrosActivity"
             android:exported="false" />
         <activity
-            android:name=".views.SubirFoto"
+            android:name=".presentation.views.SubirFoto"
             android:exported="false" />
         <activity
-            android:name=".views.RegistroUsuarioActivity"
+            android:name=".presentation.views.RegistroUsuarioActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
