@@ -1,0 +1,39 @@
+import 'dart:io';
+void main() {
+  
+  stdout.write('¿Cual es el mes?:');
+  string mes = stdin.readLineSync();
+  
+  print(devolverFecha(14, 23));
+  print(devolverFecha(4, 31));
+  print(devolverFecha(4, 27));
+  print(devolverFecha(2, 29));
+  print(devolverFecha(4, 30));
+  print(devolverFecha(12, 31));
+  
+  // recolectar del usuario el mes y el dia
+}
+
+
+String devolverFecha(int mes, int dia){
+  String msg = '$dia/$mes Es una fecha invalida';
+  
+  List<int> mesesCon30Dias = [1, 3, 5, 7, 8, 10, 12];
+  if(mes > 12 || mes < 1){
+    msg = '$mes es un mes invalido.';
+  }else{
+    if(dia > 0 && dia <= 28){
+      msg = '$dia/$mes es una fecha valida.';
+    }
+    if(dia == 30 && mes != 2){
+      msg = '$dia/$mes es una fecha valida.';
+    }
+    if(dia == 31 && mesesCon30Dias.contains(mes)){
+      msg = '$dia/$mes es una fecha valida.';
+    }
+    if(dia == 29 && mes ==2){
+      msg = '$dia/$mes es valida en bisiesto.';
+    }
+  }
+  return msg;
+}

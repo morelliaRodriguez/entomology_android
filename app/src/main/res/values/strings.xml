@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Entomology</string>
+
+    //Button
+    <string name="text_button_omitir">Omitir</string>
+    <string name="text_button_guargar">Guardar</string>
+
+    <string name="compartir_ubicacion">Compartenos tu ubicación</string>
+    <string name="compartir_ubicacbión_contenido">Deja que Entomology conozca tu ubicación para gestionar tus registros de una mejor manera</string>
+</resources>
