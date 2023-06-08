@@ -1,4 +1,4 @@
-package com.example.entomology.models
+package com.example.entomology.domain.models
 
 data class ModelUser(
     val name : String,
