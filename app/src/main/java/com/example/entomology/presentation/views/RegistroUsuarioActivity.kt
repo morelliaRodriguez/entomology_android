@@ -43,6 +43,7 @@ class RegistroUsuarioActivity : AppCompatActivity() {
         }
         btnGuardar.setOnClickListener {
             validateUser()
+            startActivity(Intent(this, RegistroNuevoConteoActivity::class.java))
         }
     }
     fun checkUserValues(){
@@ -54,7 +55,7 @@ class RegistroUsuarioActivity : AppCompatActivity() {
         if(binding.EditTextUserName.text.toString().isNotEmpty()){
             sharedPreferences.saveName(binding.EditTextUserName.text.toString())
             sharedPreferences.savePhotoUrl(btnImage.toString())
-            startActivity(Intent(this, RegistrosActivity::class.java))
+
         }else{
             //Hacer otra cosa
         }
