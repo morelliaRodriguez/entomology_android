@@ -7,6 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
+        android:name=".aplication.repository.EntomologyApplication"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -16,7 +17,7 @@
             android:name=".presentation.views.RegistrosActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.views.SubirFoto"
+            android:name=".presentation.views.SubirFotoActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.views.RegistroUsuarioActivity"

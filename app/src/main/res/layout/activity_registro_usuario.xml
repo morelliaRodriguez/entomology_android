@@ -35,7 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="360dp"
-            android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,9 +52,10 @@
             </TextView>
 
             <EditText
-
+                android:id="@+id/EditTextUserName"
                 android:layout_width="328dp"
-                android:layout_height="56dp">
+                android:layout_height="56dp"
+                android:background="@drawable/backgroud_button_green">
 
             </EditText>
 
@@ -113,6 +113,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2">
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AppCompatButtonOmitir"
                 android:layout_width="99dp"
                 android:layout_height="40dp"
                 android:drawableBottom="@drawable/background_green"
@@ -126,6 +127,7 @@
             </androidx.appcompat.widget.AppCompatButton>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AppCompatButtonGuardar"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:text="@string/text_button_guargar"

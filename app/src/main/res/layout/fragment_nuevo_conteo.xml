@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.views.NuevoConteoFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TextViewNuevoConteo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Nuevo Conteo"
+            android:textSize="16sp"></TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/AppCompatButtonNuevoConteo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_button_new_count"
+            android:text="+"
+            android:textSize="20sp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</FrameLayout>

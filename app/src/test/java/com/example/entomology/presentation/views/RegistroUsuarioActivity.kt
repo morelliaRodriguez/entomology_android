@@ -21,7 +21,7 @@ class RegistroUsuarioActivity : AppCompatActivity() {
         screenSplash.setKeepOnScreenCondition{false}
 
         btnImage.setOnClickListener {
-            val intent = Intent(this, SubirFoto::class.java)
+            val intent = Intent(this, SubirFotoActivity::class.java)
             startActivity(intent)
         }
     }
