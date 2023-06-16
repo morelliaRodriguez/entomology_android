@@ -19,6 +19,15 @@ class RegistroUsuarioActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistroUsuarioBinding
     private lateinit var btnImage: ImageFilterButton
 
+    val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()){
+            uri ->
+        if (uri!=null){
+            binding.imageFilterButtonUrlPhoto.setImageURI(uri)
+            sharedPreferences.savePhotoUrl(uri.toString())
+        }else
+            Log.i("msg","No seleccionada")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         val screenSplash = installSplashScreen()
         super.onCreate(savedInstanceState)
@@ -32,6 +41,9 @@ class RegistroUsuarioActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.FrameLayoutRegistrarUsuario, SubirFotoFragment())
                 .commit()
+
+            //pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+
         }
 
 
