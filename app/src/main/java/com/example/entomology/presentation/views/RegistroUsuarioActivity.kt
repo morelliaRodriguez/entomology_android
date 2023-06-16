@@ -11,57 +11,17 @@ import androidx.constraintlayout.utils.widget.ImageFilterButton
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.entomology.aplication.repository.EntomologyApplication.Companion.sharedPreferences
 import com.example.entomology.databinding.ActivityRegistroUsuarioBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class RegistroUsuarioActivity : AppCompatActivity() {
-    val screenSplash = installSplashScreen()
-
     private lateinit var binding: ActivityRegistroUsuarioBinding
-    private lateinit var btnImage: ImageFilterButton
-    private lateinit var btnGuardar: AppCompatButton
-
-    val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()){
-            uri ->
-        if (uri!=null){
-            binding.imageFilterButtonUrlPhoto.setImageURI(uri)
-            sharedPreferences.savePhotoUrl(uri.toString())
-        }else
-            Log.i("msg","No seleccionada")
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val screenSplash = installSplashScreen()
         super.onCreate(savedInstanceState)
         binding = ActivityRegistroUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         screenSplash.setKeepOnScreenCondition{false}
-        checkUserValues()
-        btnImage= binding.imageFilterButtonUrlPhoto
-        btnGuardar= binding.AppCompatButtonGuardar
 
-        btnImage.setOnClickListener {
-            pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
-            //startActivity(Intent(this, SubirFoto::class.java))
-        }
-        btnGuardar.setOnClickListener {
-            validateUser()
-            startActivity(Intent(this, RegistroNuevoConteoActivity::class.java))
-        }
-    }
-    fun checkUserValues(){
-        if(sharedPreferences.getName().isNotEmpty()){
-            startActivity(Intent(this, RegistrosActivity::class.java))
-        }else{
-            startActivity(Intent(this, RegistroUsuarioActivity::class.java))
-        }
-    }
-    fun validateUser(){
-        if(binding.EditTextUserName.text.toString().isNotEmpty()){
-            sharedPreferences.saveName(binding.EditTextUserName.text.toString())
-            sharedPreferences.savePhotoUrl(btnImage.toString())
-
-        }else{
-            //Hacer otra cosa
-        }
     }
 }
