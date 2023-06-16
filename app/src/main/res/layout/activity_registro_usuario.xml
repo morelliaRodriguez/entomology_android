@@ -6,12 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
-    tools:context=".presentation.views.RegistroUsuarioActivity">
+    tools:context=".presentation.views.activitys.RegistroUsuarioActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
 
         <androidx.constraintlayout.utils.widget.ImageFilterButton
             android:id="@+id/imageFilterButtonUrlPhoto"
@@ -20,10 +22,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             app:altSrc="@drawable/ic_launcher_foreground"
+            app:circularflow_defaultRadius="100dp"
             app:circularflow_radiusInDP="100dp"
             app:layout_constraintCircleRadius="100dp"
-            app:circularflow_defaultRadius="100dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,124 +32,17 @@
 
         </androidx.constraintlayout.utils.widget.ImageFilterButton>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="360dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent">
+        <FrameLayout
+            android:id="@+id/FrameLayoutRegistrarUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="100dp">
 
-            <TextView
-                android:id="@+id/tvNombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_black"
-                android:text="Nombre"
-                android:textSize="16sp">
-
-            </TextView>
-
-            <EditText
-                android:id="@+id/EditTextUserName"
-                android:layout_width="328dp"
-                android:layout_height="56dp"
-                android:background="@drawable/backgroud_button_green">
-
-            </EditText>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat2"
-            android:layout_width="352dp"
-            android:layout_height="59dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"
-            app:layout_constraintVertical_bias="0.24">
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </Switch>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/compartir_ubicacion">
-
-                </TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/compartir_ubicacbión_contenido">
-
-                </TextView>
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
 
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/AppCompatButtonOmitir"
-                android:layout_width="99dp"
-                android:layout_height="40dp"
-                android:drawableBottom="@drawable/background_green"
-                android:text="@string/text_button_omitir"
-                android:background="@drawable/backgroud_button_green"
-                android:textSize="14sp"
-                android:gravity="center"
-                android:textColor="@color/text_button"
-                android:fontFamily="@font/roboto_black">
-
-            </androidx.appcompat.widget.AppCompatButton>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/AppCompatButtonGuardar"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:text="@string/text_button_guargar"
-                android:background="@drawable/backgroud_button_green"
-                android:layout_marginStart="124dp"
-                android:textSize="14sp"
-                android:gravity="center"
-                android:textColor="@color/text_button"
-                android:fontFamily="@font/roboto_black">
-
-            </androidx.appcompat.widget.AppCompatButton>
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Entomology"
         tools:targetApi="31" >
         <activity
-            android:name=".presentation.views.RegistroUsuarioActivity"
+            android:name=".presentation.views.activitys.RegistroUsuarioActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting" >
             <intent-filter>
@@ -30,7 +30,7 @@
             android:name=".presentation.views.SubirFotoActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.views.RegistrosActivity"
+            android:name=".presentation.views.activitys.RegistrosActivity"
             android:exported="false" />
     </application>
 
