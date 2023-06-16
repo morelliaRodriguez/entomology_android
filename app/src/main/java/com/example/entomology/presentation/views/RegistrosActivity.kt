@@ -10,11 +10,11 @@ import dagger.hilt.android.AndroidEntryPoint
 class RegistrosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        val screenSplash = installSplashScreen()
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registros)
 
-        screenSplash.setKeepOnScreenCondition{false}
+
     }
 }

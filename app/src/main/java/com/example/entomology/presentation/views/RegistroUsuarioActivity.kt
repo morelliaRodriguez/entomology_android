@@ -8,12 +8,15 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.utils.widget.ImageFilterButton
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.entomology.aplication.repository.EntomologyApplication.Companion.sharedPreferences
 import com.example.entomology.databinding.ActivityRegistroUsuarioBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class RegistroUsuarioActivity : AppCompatActivity() {
+    val screenSplash = installSplashScreen()
+
     private lateinit var binding: ActivityRegistroUsuarioBinding
     private lateinit var btnImage: ImageFilterButton
     private lateinit var btnGuardar: AppCompatButton
@@ -31,6 +34,7 @@ class RegistroUsuarioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistroUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        screenSplash.setKeepOnScreenCondition{false}
         checkUserValues()
         btnImage= binding.imageFilterButtonUrlPhoto
         btnGuardar= binding.AppCompatButtonGuardar
@@ -47,6 +51,8 @@ class RegistroUsuarioActivity : AppCompatActivity() {
     fun checkUserValues(){
         if(sharedPreferences.getName().isNotEmpty()){
             startActivity(Intent(this, RegistrosActivity::class.java))
+        }else{
+            startActivity(Intent(this, RegistroUsuarioActivity::class.java))
         }
     }
     fun validateUser(){
