@@ -5,4 +5,7 @@
     <color name="primary">#D3E8D2</color>
     <color name="secundary">#FCFDF7</color>
     <color name="text_button">#006D31</color>
+
+    <color name="green_white">#80D4D6C4</color>
+    <color name="color_transparent">#00000000</color>
 </resources>

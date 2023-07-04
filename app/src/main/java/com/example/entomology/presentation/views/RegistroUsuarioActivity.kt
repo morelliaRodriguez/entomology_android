@@ -8,7 +8,6 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.utils.widget.ImageFilterButton
-import com.example.entomology.aplication.repository.EntomologyApplication.Companion.sharedPreferences
 import com.example.entomology.databinding.ActivityRegistroUsuarioBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,7 +21,6 @@ class RegistroUsuarioActivity : AppCompatActivity() {
             uri ->
         if (uri!=null){
             binding.imageFilterButtonUrlPhoto.setImageURI(uri)
-            sharedPreferences.savePhotoUrl(uri.toString())
         }else
             Log.i("msg","No seleccionada")
     }
@@ -31,7 +29,6 @@ class RegistroUsuarioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistroUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        checkUserValues()
         btnImage= binding.imageFilterButtonUrlPhoto
         btnGuardar= binding.AppCompatButtonGuardar
 
@@ -40,22 +37,8 @@ class RegistroUsuarioActivity : AppCompatActivity() {
             //startActivity(Intent(this, SubirFoto::class.java))
         }
         btnGuardar.setOnClickListener {
-            validateUser()
             startActivity(Intent(this, RegistroNuevoConteoActivity::class.java))
         }
     }
-    fun checkUserValues(){
-        if(sharedPreferences.getName().isNotEmpty()){
-            startActivity(Intent(this, RegistrosActivity::class.java))
-        }
-    }
-    fun validateUser(){
-        if(binding.EditTextUserName.text.toString().isNotEmpty()){
-            sharedPreferences.saveName(binding.EditTextUserName.text.toString())
-            sharedPreferences.savePhotoUrl(btnImage.toString())
 
-        }else{
-            //Hacer otra cosa
-        }
-    }
 }

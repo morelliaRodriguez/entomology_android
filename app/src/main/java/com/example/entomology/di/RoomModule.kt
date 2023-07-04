@@ -1,4 +1,4 @@
-package com.example.entomology.data.di
+package com.example.entomology.di
 
 import android.content.Context
 import androidx.room.Room

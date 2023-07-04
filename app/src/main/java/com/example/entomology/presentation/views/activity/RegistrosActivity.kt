@@ -1,4 +1,4 @@
-package com.example.entomology.presentation.views
+package com.example.entomology.presentation.views.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +8,8 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class RegistrosActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         val screenSplash = installSplashScreen()
