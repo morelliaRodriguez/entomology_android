@@ -30,7 +30,7 @@
             android:name=".presentation.views.SubirFotoActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.views.RegistroUsuarioActivity"
+            android:name=".presentation.views.activity.RegistroUsuarioActivity"
             android:exported="true" />
     </application>
 

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".presentation.views.fragment.RegistroUsuarioFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="112dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TextViewNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:layout_marginStart="30dp"
+                android:text="Nombre"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/EditTextUserName"
+                android:layout_width="328dp"
+                android:layout_height="56dp"
+                android:background="@drawable/backgroud_button_green">
+
+            </EditText>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat2"
+            android:layout_width="352dp"
+            android:layout_height="59dp"
+            android:background="@color/white"
+            android:layout_marginBottom="89dp"
+            android:orientation="horizontal">
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Switch>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/compartir_ubicacion">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/compartir_ubicacbión_contenido">
+
+                </TextView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AppCompatButtonOmitir"
+                android:layout_width="99dp"
+                android:layout_height="40dp"
+                android:drawableBottom="@drawable/background_green"
+                android:text="@string/text_button_omitir"
+                android:background="@drawable/backgroud_button_green"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/text_button"
+                android:fontFamily="@font/roboto_black">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AppCompatButtonGuardar"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="@string/text_button_guargar"
+                android:background="@drawable/backgroud_button_green"
+                android:layout_marginStart="124dp"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/text_button"
+                android:fontFamily="@font/roboto_black">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.entomology.R
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 /**
  * A simple [Fragment] subclass.
