@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.views.fragment.ListaRegistrosFragment"
+    tools:context=".presentation.views.fragments.ListaRegistrosFragment"
     android:background="@color/primary">
 
     <androidx.appcompat.widget.AppCompatImageView

@@ -1,4 +1,4 @@
-package com.example.entomology.presentation.views.activity
+package com.example.entomology.presentation.views.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.example.entomology.presentation.views.fragment
+package com.example.entomology.presentation.views.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
