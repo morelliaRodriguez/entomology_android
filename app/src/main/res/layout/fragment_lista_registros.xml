@@ -16,69 +16,78 @@
         android:src="@drawable/avatar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="16dp"
-        android:background="@color/green_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/appCompatImageView_check_price_far_away_close"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:contentDescription="@string/any_imagenview"
-            android:src="@drawable/baseline_record"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/new_count"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/Button_close"
-            app:layout_constraintStart_toEndOf="@+id/appCompatImageView_check_price_far_away_close"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/Button_close"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="12dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/stylo_borde_redondeado"
-            android:contentDescription="@string/description_imagebutton"
-            android:src="@drawable/baseline_add"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerCat"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/color_transparent"
-        android:layout_marginVertical="10dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintBottom_toTopOf="@+id/AppCompatButton_confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView_check_price_far_away_close"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:contentDescription="@string/any_imagenview"
+                android:src="@drawable/baseline_record"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/new_count"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Button_close"
+                app:layout_constraintStart_toEndOf="@+id/appCompatImageView_check_price_far_away_close"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/Button_close"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/stylo_borde_redondeado"
+                android:contentDescription="@string/description_imagebutton"
+                android:src="@drawable/baseline_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_transparent"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_incecto"/>
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/AppCompatButton_confirm"
@@ -92,6 +101,7 @@
         android:paddingHorizontal="23dp"
         android:paddingVertical="8dp"
         android:text="@string/reports"
+        android:visibility="invisible"
         android:background="@drawable/black_border_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -107,6 +117,7 @@
         android:textColor="@color/text_button"
         android:paddingHorizontal="23dp"
         android:paddingVertical="8dp"
+        android:visibility="invisible"
         android:text="@string/records"
         android:background="@drawable/black_border_and_rounded_padding"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -14,9 +14,9 @@ class PreferencesEntomology @Inject constructor(
 
     private val sharedPreferences = context.getSharedPreferences(SHARED_NAME, Context.MODE_PRIVATE)
 
-    override fun saveEntomology(name: String, photoUrl: String){
-        sharedPreferences.edit().putString(SHARED_USER_NAME, name).apply()
-        sharedPreferences.edit().putString(SHARES_PHOTO_URL,photoUrl).apply()
+    override fun saveEntomology(name: String, photoUrl: String): Boolean {
+        return  sharedPreferences.edit().putString(SHARED_USER_NAME, name).commit()
+                && sharedPreferences.edit().putString(SHARES_PHOTO_URL,photoUrl).commit()
     }
     override fun getEntomology(): ArrayList<String> {
         val user = arrayListOf<String>()

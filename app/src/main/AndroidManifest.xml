@@ -24,12 +24,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.views.RegistroNuevoConteoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.views.SubirFotoActivity"
-            android:exported="false" />
-        <activity
             android:name=".presentation.views.activitys.RegistroUsuarioActivity"
             android:exported="true" />
     </application>

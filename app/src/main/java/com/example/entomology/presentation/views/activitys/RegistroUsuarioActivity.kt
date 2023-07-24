@@ -14,7 +14,7 @@ class RegistroUsuarioActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistroUsuarioBinding
     private lateinit var btnImage: ImageFilterButton
 
-    val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()){
+    private val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()){
             uri ->
         if (uri!=null){
             binding.imageFilterButtonUrlPhoto.setImageURI(uri)
