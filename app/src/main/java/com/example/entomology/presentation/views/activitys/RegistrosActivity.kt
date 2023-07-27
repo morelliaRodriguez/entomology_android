@@ -20,7 +20,6 @@ import kotlinx.coroutines.launch
 class RegistrosActivity : AppCompatActivity() {
 
     private val viewModelEntomologo by viewModels<EntomologoViewModel>()
-
     private lateinit var screenSplash : SplashScreen
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,11 +30,11 @@ class RegistrosActivity : AppCompatActivity() {
         screenSplash.setKeepOnScreenCondition{true}
 
         getUserEntomologist()
+        viewModelEntomologo.getEntomology()
 
     }
     private fun getUserEntomologist(){
         lifecycleScope.launch {
-            viewModelEntomologo.getEntomology()
             repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModelEntomologo.uiState.collect{ uiState ->
                     if(!uiState.loading) {
@@ -45,7 +44,7 @@ class RegistrosActivity : AppCompatActivity() {
                                 "El error es: ${uiState.msgError}",
                                 Toast.LENGTH_SHORT).show()
                         }
-                        else if(uiState.nameEntomology != "") {
+                        else if(uiState.nameEntomology == "") {
                             val inten = Intent(this@RegistrosActivity, RegistroUsuarioActivity::class.java)
                             startActivity(inten)
                         } else {
