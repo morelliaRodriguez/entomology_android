@@ -1,6 +1,7 @@
 package com.example.entomology.di
 
 import com.example.entomology.domain.repositories.IEntomologyPreferences
+import com.example.entomology.domain.repositories.IInsectRepository
 import com.example.entomology.presentation.viewmodels.EntomologoViewModel
 import com.example.entomology.presentation.viewmodels.RegistrosViewModel
 import dagger.Module
@@ -14,7 +15,8 @@ class ViewModelModule {
 
     @Provides
     fun provideRegistrosViewModel (
-    ) : RegistrosViewModel = RegistrosViewModel()
+        iInsectRepository: IInsectRepository
+    ) : RegistrosViewModel = RegistrosViewModel(iInsectRepository)
 
     @Provides
     fun provideEntomologoViewModel (
